@@ -1,0 +1,16 @@
+<form action=""> 
+    <div>
+        <label for="">username</label>
+    </div>
+    <div>
+        <input type="text" name="username" class="form-control"[(ngModel)]="login.username">
+    </div>
+    <div>
+        <label for="">password</label>
+    </div>
+    <input type="password" name="password" class="form-control" [(ngModel)]="login.password">
+    <div>
+        <button (click)="loginnew()">login</button>
+       
+    </div>
+</form>

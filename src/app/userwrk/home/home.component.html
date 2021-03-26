@@ -1,0 +1,65 @@
+<form action=""  (ngSubmit)="save()">
+    <div>
+        <label for="">username</label>
+    </div>
+    <div>
+        <input type="text" name="username" class="form-control" [(ngModel)]="homewrk.username">
+    </div>
+    <div>
+        <label for="">email</label>
+    </div>
+    <div>
+        <input type="email" name="email" class="form-control" [(ngModel)]="homewrk.email">
+    </div>
+    <div>
+        <label for="">Mobile_Number</label>
+    </div>
+    <div>
+        <input type="number" name="mobile" class="form-control" [(ngModel)]="homewrk.mobile">
+    </div>
+    <div>
+        <label for=""> password</label>
+
+    </div>
+    <div>
+        <input type="password" name="password" class="form-control" [(ngModel)]="homewrk.password">
+    </div>
+    <div>
+        <button>click</button>
+        <button>update</button>
+        
+    </div>
+    <div><button (click)="Logout() " class="btn btn-alert">Logout</button></div>
+    
+</form>
+<button (click)="logedin()" class="btn btn-primary">login</button>
+
+<style>
+    table, th, td{
+       border: 1px solid black;
+       border-collapse: collapse;
+       padding: 5px;
+     }
+   </style>
+<table>
+    <tr>
+        <th>id</th>
+        <th>username</th>
+        <th>email</th>
+        <th>mobile</th>
+        <th>password</th>
+        <th>update</th>
+        <th>delete</th>
+
+    </tr>
+    <tr *ngFor="let arr1 of userwrklist">
+        <td>{{arr1.id}}</td>
+        <td>{{arr1.username}}</td>
+        <td>{{arr1.email}}</td>
+        <td>{{arr1.mobile}}</td>
+        <td>{{arr1.password}}</td>
+        <td><button (click)="add(arr1)">add</button></td>
+        <td><button (click)="remove(arr1)">remove</button></td>
+
+    </tr>
+</table>
